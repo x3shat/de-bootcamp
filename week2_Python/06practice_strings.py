@@ -25,7 +25,14 @@
 
 
 # Days between '2026-01-05' and '2026-04-15'?
-from datetime import datetime
-d1=datetime.strptime("2026-01-05","%Y-%m-%d")
-d2=datetime.strptime("2026-04-15","%Y-%m-%d")
-print((d2-d1).days)
+# from datetime import datetime
+# d1=datetime.strptime("2026-01-05","%Y-%m-%d")
+# d2=datetime.strptime("2026-04-15","%Y-%m-%d")
+# print((d2-d1).days)
+
+
+# Sort [('Pen',20),('Bag',900),('Book',150)] cheapest first and print "Pen costs Rs 20" style lines.
+items=[('Pen',20),('Bag',900),('Book',150)] 
+items.sort(key=lambda x :x[1])
+for name, price in items:
+    print(f"{name} costs Rs {price}")
